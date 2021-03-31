@@ -1,17 +1,22 @@
-<%= form_with(model: comment, local: true) do |form| %>
-  <% if comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
 
-      <ul>
-        <% comment.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="neonBox">
+  <div class="alert alert-custom" role="alert">
+    <div class="center">
+      <h3>Post a comment</h3>
+
+      <%= form_for [ @post, @comment ] do |f| %>
+  
+      <p>
+        <%= f.label :comment %><br>
+        <%= f.text_area :comment %>
+      </p>
+
+      <p>
+        <%= f.submit 'Submit' %>
+      </p>
+
+      <% end %>
+
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= form.submit %>
   </div>
-<% end %>
+</div>
