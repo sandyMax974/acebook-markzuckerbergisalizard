@@ -15,6 +15,7 @@ feature 'editing posts' do
         fill_in "Message", with: "Goodbye Lizard"
         click_button "Submit"
         expect(page).to have_content("Goodbye Lizard")
+        expect(page).to have_content("post successfully updated!")
         expect(page).not_to have_content("Hello Lizard")
     end
 end
