@@ -27,7 +27,7 @@
         data: {confirm: 'Are you sure?'} %>
     <% end %>
     <% if post.comments.count == 0 %>
-    <% comment = 'comment' %>
+    <% comment = 'Comment' %>
     <% else %>
     <%  comment = pluralize(post.comments.count, 'comment') %>
     <% end %>
