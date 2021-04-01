@@ -4,7 +4,7 @@
     <h1>What's on your mind Lizard?</h1>
     <%= form_for @post do |form| %>
       <%= form.text_area :message %> <br>
-      <%= form.submit "Submit" %>
+      <%= form.submit "Submit", class: "submitbuttons" %>
     <% end %>
     </div>
   </div>

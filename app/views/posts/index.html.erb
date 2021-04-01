@@ -33,7 +33,7 @@
     <% else %>
     <%  comment = pluralize(post.comments.count, 'comment') %>
     <% end %>
-    <%= link_to comment,  post_path(post) %>
+    <%= button_to comment,  post_path(post), method: :get, class: "postbuttons" %>
   </div>
 </div>
 <br>
