@@ -15,7 +15,11 @@
      <p><%= @post.likes.count %> <%= '🦎' %></p>
    <% end %>
     <% if current_user.id == @post.user_id %>
-    <%= button_to "Edit Post", edit_post_path(@post), method: :get, class: "postbuttons" %>
+    <% if @post.editable? %>
+    <%= button_to "Edit Post", edit_post_path(@post), method: :get, class: "postbuttons", id: "editpost" %>
+    <% else %>
+    <p class = "timestamppost">Post can no longer be edited.</P>
+    <% end %>
     <%= button_to "Delete Post", post_path(@post), method: :delete,
   data: {confirm: 'Are you sure?'}, class: "postbuttons" %>
     <% end %>

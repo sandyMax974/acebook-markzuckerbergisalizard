@@ -7,4 +7,9 @@ class Post < ApplicationRecord
   validates :user_id, presence: true
   validates :message, presence: true
   has_many :comments, dependent: :destroy
+
+  def editable?
+    self.created_at >= 10.minutes.ago
+  end
+
 end
