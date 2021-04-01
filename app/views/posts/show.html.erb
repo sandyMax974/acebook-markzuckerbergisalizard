@@ -37,9 +37,14 @@
     <%= simple_format(comment.comment) %>
     <p class="timestamppost"><%= comment.created_at.strftime("commented on %m/%d/%Y at %I:%M%p")%></p>
     <% if current_user.id == comment.user_id %>
-    <%= button_to "Edit Comment", edit_post_comment_path(@post, comment), class: "postbuttons", method: :get %>
-    <%= button_to "Delete Comment", post_comment_path(@post, comment), method: :delete,
+      <% if comment.check_update_timeout? %>
+        <%= button_to "Edit Comment", edit_post_comment_path(@post, comment), class: "postbuttons", method: :get %>
+        <%= button_to "Delete Comment", post_comment_path(@post, comment), method: :delete,
   data: {confirm: 'Are you sure?'}, class: "postbuttons" %>
+      <% else %> 
+        <%= button_to "Delete Comment", post_comment_path(@post, comment), method: :delete,
+   data: {confirm: 'Are you sure?'}, class: "postbuttons" %>
+        <% end %>
     <% end %>
   </div>
 </div>
