@@ -32,7 +32,7 @@ end
     session[:return_to] ||= request.referer
     @post = Post.find(params[:id])
     if !@post.editable?
-      flash[:error] = "Posts can only be edited upto 10 minutes after creation."
+      flash[:error] = "Posts can only be edited up to 10 minutes after creation."
       redirect_to session.delete(:return_to) 
     end
   end
