@@ -59,7 +59,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.find(params[:id])
 
-    update_timeout = @comment.created_at + 2.minutes
+    update_timeout = @comment.created_at + 10.minutes
     Time.now > update_timeout
   end 
 
