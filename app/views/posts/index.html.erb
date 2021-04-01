@@ -27,10 +27,15 @@
         <%= button_to "Edit Post", edit_post_path(post), method: :get, class: "postbuttons", id: "editpost" %>
         <%= button_to "Delete Post", post_path(post), method: :delete, class: "postbuttons", id: "deletepost",
         data: {confirm: 'Are you sure?'} %>
-      <% end %>
-      <%= link_to "Comment",  post_path(post) %>
-    </div>
+    <% end %>
+    <% if post.comments.count == 0 %>
+    <% comment = 'Comment' %>
+    <% else %>
+    <%  comment = pluralize(post.comments.count, 'comment') %>
+    <% end %>
+    <%= link_to comment,  post_path(post) %>
   </div>
-  <br>
+</div>
+<br>
 
 <% end %>
