@@ -61,6 +61,7 @@
   border: none;
   cursor: pointer;
   overflow: hidden;
+  opacity: 50%;
 }
 
  .alert-custom {
@@ -69,6 +70,7 @@
    border-width: 5px;
    $alert-border-radius: 10px;
    color: #fff;
+   overflow: hidden;
  }
 
  .alert-custom-login {
@@ -90,12 +92,20 @@
 }
 
 .neonBox {
- color: #f002ff;
+ color: #fff;
+ margin: 10px;
  box-shadow:
    0 0 5px #f002ff,
    0 0 10px #f334ff,
    0 0 20px #f667ff,
    0 0 40px #f999ff,
+}
+
+.commentBox {
+  font-family: 'Courier New', monospace;
+  color: white;
+  text-align: center;
+  padding: 10px
 }
 
 .navbar-default {
@@ -133,4 +143,32 @@ a:hover {
 .navbar-brand {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.newpostbutton {
+  background-color: Transparent;
+  color: #ffffff;
+  border: none;
+  box-shadow:
+    0 0 5px #f002ff,
+    0 0 10px #f334ff,
+    0 0 20px #f667ff,
+    0 0 40px #f999ff,
+}
+
+.postbuttons {
+  background-color: Transparent;
+  color: #ffffff;
+  border: none;
+  display: inline;
+  float: left;
+  box-shadow:
+    0 0 5px #f002ff,
+    0 0 10px #f334ff,
+    0 0 20px #f667ff,
+    0 0 40px #f999ff,
+}
+
+#editpost {
+  margin-right: 10px;
 }
