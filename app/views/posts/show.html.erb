@@ -24,9 +24,14 @@
     <%= comment.created_at.strftime("commented on %m/%d/%Y at %I:%M%p")%>
     <%= simple_format(comment.comment) %>
     <% if current_user.id == comment.user_id %>
-    <%= link_to "Edit Comment", edit_post_comment_path(@post, comment) %>
-    <%= link_to "Delete Comment", post_comment_path(@post, comment), method: :delete,
-  data: {confirm: 'Are you sure?'}%>
+      <% if comment.check_update_timeout? %>
+        <%= link_to "Edit Comment", edit_post_comment_path(@post, comment) %>
+        <%= link_to "Delete Comment", post_comment_path(@post, comment), method: :delete,
+        data: {confirm: 'Are you sure?'}%>
+      <% else %> 
+        <%= link_to "Delete Comment", post_comment_path(@post, comment), method: :delete,
+        data: {confirm: 'Are you sure?'}%>
+        <% end %>
     <% end %>
   </div>
 </div>
