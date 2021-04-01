@@ -16,19 +16,18 @@
                <%= f.password_field :password %>
                </div>
 
-               <div col-sm>
-               </div>
-
               </div>
+
             </div>
-     
-            <br>
-          <%= f.submit "Sign in", class: "btn btn-large btn-alert" %>
+            <center>
+            <%= f.submit "Sign in", class: "btn btn-large btn-alert", id: "signup-button" %>
+</center>
+            </div>
           <br>
           <% end %>
           <br>
-          <p>New to Acebook? <%= link_to "Sign up now!", signup_path %></p>
-        </div>
+          <p>New to Acebook? <%= button_to "Sign up now!", signup_path, class: "btn btn-large btn-alert", id: "signup-button"  %></p>
+        
     
     </div>
   </div>

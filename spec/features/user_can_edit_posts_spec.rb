@@ -12,7 +12,7 @@ feature 'editing posts' do
 
     scenario 'user can change content of their posts' do
         first(:button, "Edit Post").click
-        fill_in "Message", with: "Goodbye Lizard"
+        fill_in "post_message", with: "Goodbye Lizard"
         click_button "Submit"
         expect(page).to have_content("Goodbye Lizard")
         expect(page).to have_content("post successfully updated!")

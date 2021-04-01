@@ -21,6 +21,7 @@
   font-family: 'Courier New', monospace;
  }
 
+
 .likebutton {
   border-radius: 25px;
   background-color: Transparent;
@@ -54,6 +55,7 @@
   border: none;
   cursor: pointer;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .likebutton {
@@ -61,6 +63,7 @@
   border: none;
   cursor: pointer;
   overflow: hidden;
+  margin-bottom: 20px;
   opacity: 50%;
 }
 
@@ -162,6 +165,7 @@ a:hover {
   border: none;
   display: inline;
   float: left;
+  margin-right: 10px;
   box-shadow:
     0 0 5px #f002ff,
     0 0 10px #f334ff,
@@ -169,6 +173,27 @@ a:hover {
     0 0 40px #f999ff,
 }
 
-#editpost {
-  margin-right: 10px;
+.submitbuttons {
+  background-color: Transparent;
+  color: #ffffff;
+  border: none;
+  box-shadow:
+    0 0 5px #f002ff,
+    0 0 10px #f334ff,
+    0 0 20px #f667ff,
+    0 0 40px #f999ff;
+  margin: 20px;
 }
+
+#signup-button{
+  background-color: Transparent;
+  color: #ffffff;
+  border: none;
+  box-shadow:
+    0 0 5px #f002ff,
+    0 0 10px #f334ff,
+    0 0 20px #f667ff,
+    0 0 40px #f999ff;
+  margin: 20px;
+}
+
