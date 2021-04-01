@@ -4,12 +4,12 @@
    <h1>All Posts</h1>
    <%= button_to 'New post', new_post_path, method: :get, class: "newpostbutton" %><br>
     </div>
-    
   </div>
 </div>
 
 
 <% @posts.each do |post| %>
+
   <div class="neonBox">
     <div class="alert alert-custom" role="alert">
       <%= simple_format(post.message) %>
@@ -28,8 +28,9 @@
         <%= button_to "Delete Post", post_path(post), method: :delete, class: "postbuttons", id: "deletepost",
         data: {confirm: 'Are you sure?'} %>
       <% end %>
+      <%= link_to "Comment",  post_path(post) %>
     </div>
   </div>
   <br>
-<% end %>
 
+<% end %>

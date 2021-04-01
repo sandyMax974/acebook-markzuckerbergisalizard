@@ -40,7 +40,13 @@ class PostsController < ApplicationController
     redirect_to session.delete(:return_to)
   end
 
-
+  def show
+    @post = Post.find(params[:id])
+    @comment = Comment.new
+    @comment.post_id = @post.id
+    @comment.user_id = current_user.id
+  end
+  
   private
 
   def post_params
