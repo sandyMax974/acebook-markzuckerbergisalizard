@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+  before_action :update_time_out, only: %i[ edit update ] 
 
   def create
     @comment = Comment.new(comment_params)
@@ -55,5 +55,19 @@ class CommentsController < ApplicationController
     redirect_to post_path(@post)
   end
 
-  
+  def check_update_timeout?
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+
+    update_timeout = @comment.created_at + 2.minutes
+    Time.now > update_timeout
+  end 
+
+  def update_time_out
+    if check_update_timeout?
+      flash[:error] = "This comment is now locked."
+      redirect_to post_path(@post)
+    end
+  end
+
 end
