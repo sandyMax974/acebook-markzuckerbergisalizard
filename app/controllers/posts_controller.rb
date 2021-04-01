@@ -11,9 +11,15 @@ class PostsController < ApplicationController
   def create
     not_signed_in_redirect
     @user = current_user
-    @post = @user.posts.create(post_params)
+
+    if @user.posts.create(post_params)
+    flash[:success] = "post successfully added!"
     redirect_to session.delete(:return_to)
+  else
+    flash.now[:error] = "post was not added, try again!"
+    render "new"
   end
+end
 
   def index
     not_signed_in_redirect
@@ -29,8 +35,14 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @post.update(post_params)
-    redirect_to session.delete(:return_to)
+
+    if @post.update(post_params)
+      flash[:success] = "post successfully updated!"
+      redirect_to session.delete(:return_to)    
+    else
+      flash.now[:error] = "post was not updated, try again!"
+      render 'edit'
+    end
   end
 
   def destroy

@@ -16,6 +16,7 @@ RSpec.feature 'Timeline', type: :feature do
     fill_in 'post[message]', with: 'Hello, world!'
     click_button 'Submit'
     expect(page).to have_content('Hello, world!')
+    expect(page).to have_content('post successfully added!')
   end
 
   scenario "Can't view all posts if not signed in" do
