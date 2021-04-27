@@ -106,6 +106,6 @@ So I can interact with my firends posts
 I want to be able to like posts and comments as well as see the total number of likes on them
 ```
 
-## Feedbacks
+## Reflection
 
 Having a bit more experience with Rails, I would approach this project differenly and use more in-built libraries provided by Rails to have a cleaner file structure.
