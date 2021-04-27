@@ -14,7 +14,7 @@ Despite the short deadline given, Makers always puts an emphasis on having fun c
 
 Web-app hosted on heroku [here](https://lizardbook2021.herokuapp.com).
 
-![Acebook web-app](/Users/admin/Projects/makers/week_8/acebook-markzuckerbergisalizard/screenshots/Screenshot 2021-04-27 at 16.42.19.png)
+![Acebook web-app](https://github.com/sandyMax974/acebook-markzuckerbergisalizard/blob/main/screenshots/Screenshot%202021-04-27%20at%2016.42.19.png)
 
 ## Tech Stack
 
@@ -57,6 +57,7 @@ $ bundle exec rspec
 For a more in-depth view of the coverage report run `open coverage/index.html`
 
 **Troubleshooting**
+
 If you don't have Node.js installed yet, you might run into this error when running rspec:
 ```
 ExecJS::RuntimeUnavailable:
@@ -104,3 +105,7 @@ As a user,
 So I can interact with my firends posts
 I want to be able to like posts and comments as well as see the total number of likes on them
 ```
+
+## Feedbacks
+
+Having a bit more experience with Rails, I would approach this project differenly and use more in-built libraries provided by Rails to have a cleaner file structure.
