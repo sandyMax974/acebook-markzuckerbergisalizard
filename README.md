@@ -10,6 +10,7 @@ Requierements board [here](https://trello.com/b/N6ht59Tm/acebook-markzuckerbergi
 
 
 **Live version**
+
 Despite the short deadline given, Makers always puts an emphasis on having fun coding and we definitely had fun with the team creating this website. We slipped in a couple of inside jokes we shared during the 2-weeks, such as the lizard references 🦎, which became kind of our team mascott. 
 
 Web-app hosted on heroku [here](https://lizardbook2021.herokuapp.com).
