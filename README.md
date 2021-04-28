@@ -2,7 +2,7 @@
 
 ## Description
 
-In week 8 of the Makers Academy curriculum, we are requiered to build a clone of well-know social web-app Facebook using Ruby on Rails. The main goal of this challenge was to access if we could implement high-quality processes to build a project in a team.
+In week 8 of the Makers Academy curriculum, we are requiered to build a clone of well-know social web-app Facebook using Ruby on Rails. The main goal of this challenge was to assess if we could implement high-quality processes to build a project in a team.
 This was quite challenging, as we had to pick-up a completely new framework in less than 2 weeks, whilst maintaining good-quality code and test coverage.
 
 We were also given a list of requirements to follow by the main stakeholder (Makers coach) and had to translate these into user story and implement them as requested.
