@@ -6,6 +6,7 @@ In week 8 of the Makers Academy curriculum, we are requiered to build a clone of
 This was quite challenging, as we had to pick-up a completely new framework in less than 2 weeks, whilst maintaining good-quality code and test coverage.
 
 We were also given a list of requirements to follow by the main stakeholder (Makers coach) and had to translate these into user story and implement them as requested.
+
 Requierements board [here](https://trello.com/b/N6ht59Tm/acebook-markzuckerbergisalizard).
 
 
